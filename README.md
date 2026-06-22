@@ -1,6 +1,7 @@
 # Cats & Dogs Image Classification with PyTorch
 
 **Author:** Mohamed Osman Abdullahi
+
 **Student ID:** I202521131
 
 A reproduction of the TirendazAcademy Kaggle notebook
