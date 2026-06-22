@@ -2,14 +2,10 @@
 
 **Author:** Mohamed Osman Abdullahi
 **Student ID:** I202521131
-**Course / Module:** _[fill in your course or module name]_
-**Submission date:** _[fill in the date]_
 
 A reproduction of the TirendazAcademy Kaggle notebook
 [*"Cats & Dogs Classification with PyTorch"*](https://www.kaggle.com/code/tirendazacademy/cats-dogs-classification-with-pytorch).
 This project builds a convolutional neural network (CNN) from scratch to classify images as **cat** or **dog**, documents the full pipeline (data loading → preprocessing → model → training → evaluation), and includes two optional extensions: **transfer learning** with ResNet18 and **hyperparameter tuning** of the learning rate.
-
-> **Note on figures:** Throughout this document, lines marked `*[FIGURE: ...]*` show where to insert your saved screenshots. Place the image files in the `Results/` folder; the image link above each note already contains the correct relative path, so the figures will appear in the rendered Markdown.
 
 ---
 
@@ -89,9 +85,9 @@ The Kaggle "Cat and Dog" dataset, with a roughly balanced split between the two 
 | Test | 1,012 | 1,013 | 2,025 |
 | **Total** | | | **10,032** |
 
-*[FIGURE: dataset folder structure — the `walk_through_dir` output showing the image counts above]*
-
 ![Dataset structure](Results/kaggle/kaggle_dataset_structure.png)
+
+*[FIGURE: dataset folder structure — the `walk_through_dir` output showing the image counts above]*
 
 ### Preprocessing pipeline (`torchvision.transforms`)
 
@@ -120,9 +116,9 @@ The from-scratch model, `ImageClassifier`, is a CNN made of repeated convolution
 
 The full layer-by-layer summary was generated with `torchinfo`.
 
-*[FIGURE: the `torchinfo` model summary table]*
-
 ![Model architecture summary](Results/kaggle/kaggle_model_summary.png)
+
+*[FIGURE: the `torchinfo` model summary table]*
 
 ---
 
@@ -150,13 +146,13 @@ This section covers the four items the assignment requires: data preprocessing (
 
 The full 25-epoch run on the GPU is the primary result.
 
-*[FIGURE: Kaggle training output — the 25 epoch lines and total training time]*
-
 ![Kaggle training output](Results/kaggle/kaggle_training_output.png)
 
-*[FIGURE: Kaggle loss and accuracy curves]*
+*[FIGURE: Kaggle training output — the 25 epoch lines and total training time]*
 
 ![Kaggle training curves](Results/kaggle/kaggle_curves.png)
+
+*[FIGURE: Kaggle loss and accuracy curves]*
 
 | Metric | Epoch 1 (start) | Epoch 25 (final) | Best |
 |---|---|---|---|
@@ -175,13 +171,13 @@ The full 25-epoch run on the GPU is the primary result.
 
 To document the "local vs cloud" requirement, the same pipeline was run locally on the CPU using a small random subset (1,000 train / 400 test) for 5 epochs. The purpose was to **prove the pipeline runs locally**, not to reach high accuracy.
 
-*[FIGURE: local training output — 5 epochs and total time]*
-
 ![Local training output](Results/local/local_training_output.png)
 
-*[FIGURE: local loss and accuracy curves]*
+*[FIGURE: local training output — 5 epochs and total time]*
 
 ![Local training curves](Results/local/local_curves.png)
+
+*[FIGURE: local loss and accuracy curves]*
 
 | Metric | Epoch 1 | Epoch 5 (final) |
 |---|---|---|
@@ -218,13 +214,13 @@ Instead of training a CNN from scratch, a **ResNet18** model pre-trained on Imag
 
 Because ResNet18 expects ImageNet-style inputs, the transforms for this task additionally apply standard **ImageNet normalization** (mean `[0.485, 0.456, 0.406]`, std `[0.229, 0.224, 0.225]`).
 
-*[FIGURE: transfer learning training output — 5 epochs and total time]*
-
 ![Transfer learning output](Results/optional/transfer_learning_output.png)
 
-*[FIGURE: transfer learning loss and accuracy curves]*
+*[FIGURE: transfer learning training output — 5 epochs and total time]*
 
 ![Transfer learning curves](Results/optional/transfer_learning_curves.png)
+
+*[FIGURE: transfer learning loss and accuracy curves]*
 
 | Metric | Epoch 1 | Epoch 5 (final) | Best |
 |---|---|---|---|
@@ -238,13 +234,13 @@ Because ResNet18 expects ImageNet-style inputs, the transforms for this task add
 
 The from-scratch CNN was trained for 5 epochs at three different learning rates (with a fresh copy of the model each time) to study the effect of the learning rate. The final test accuracy of each run was compared.
 
-*[FIGURE: hyperparameter tuning results — the three accuracies and the chosen best]*
-
 ![Hyperparameter tuning results](Results/optional/hyperparameter_results.png)
 
-*[FIGURE: hyperparameter tuning bar chart]*
+*[FIGURE: hyperparameter tuning results — the three accuracies and the chosen best]*
 
 ![Hyperparameter tuning bar chart](Results/optional/hyperparameter_barchart.png)
+
+*[FIGURE: hyperparameter tuning bar chart]*
 
 | Learning rate | Final test accuracy (5 epochs) |
 |---|---|
