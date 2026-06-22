@@ -88,7 +88,7 @@ The Kaggle "Cat and Dog" dataset, with a roughly balanced split between the two 
 
 ![Dataset structure](Results/kaggle/kaggle_dataset_structure.png)
 
-*[FIGURE: dataset folder structure — the `walk_through_dir` output showing the image counts above]*
+                           *[FIGURE: dataset folder structure — the `walk_through_dir` output showing the image counts above]*
 
 ### Preprocessing pipeline (`torchvision.transforms`)
 
@@ -119,7 +119,7 @@ The full layer-by-layer summary was generated with `torchinfo`.
 
 ![Model architecture summary](Results/kaggle/kaggle_model_summary.png)
 
-*[FIGURE: the `torchinfo` model summary table]*
+                                       *[FIGURE: the `torchinfo` model summary table]*
 
 ---
 
@@ -149,11 +149,11 @@ The full 25-epoch run on the GPU is the primary result.
 
 ![Kaggle training output](Results/kaggle/kaggle_training_output.png)
 
-*[FIGURE: Kaggle training output — the 25 epoch lines and total training time]*
+                                        *[FIGURE: Kaggle training output — the 25 epoch lines and total training time]*
 
 ![Kaggle training curves](Results/kaggle/kaggle_curves.png)
 
-*[FIGURE: Kaggle loss and accuracy curves]*
+                                       *[FIGURE: Kaggle loss and accuracy curves]*
 
 | Metric | Epoch 1 (start) | Epoch 25 (final) | Best |
 |---|---|---|---|
@@ -174,11 +174,11 @@ To document the "local vs cloud" requirement, the same pipeline was run locally 
 
 ![Local training output](Results/local/local_training_output.png)
 
-*[FIGURE: local training output — 5 epochs and total time]*
+                                             *[FIGURE: local training output — 5 epochs and total time]*
 
 ![Local training curves](Results/local/local_curves.png)
 
-*[FIGURE: local loss and accuracy curves]*
+                                             *[FIGURE: local loss and accuracy curves]*
 
 | Metric | Epoch 1 | Epoch 5 (final) |
 |---|---|---|
@@ -217,11 +217,11 @@ Because ResNet18 expects ImageNet-style inputs, the transforms for this task add
 
 ![Transfer learning output](Results/optional/transfer_learning_output.png)
 
-*[FIGURE: transfer learning training output — 5 epochs and total time]*
+                                            *[FIGURE: transfer learning training output — 5 epochs and total time]*
 
 ![Transfer learning curves](Results/optional/transfer_learning_curves.png)
 
-*[FIGURE: transfer learning loss and accuracy curves]*
+                                            *[FIGURE: transfer learning loss and accuracy curves]*
 
 | Metric | Epoch 1 | Epoch 5 (final) | Best |
 |---|---|---|---|
@@ -237,11 +237,11 @@ The from-scratch CNN was trained for 5 epochs at three different learning rates 
 
 ![Hyperparameter tuning results](Results/optional/hyperparameter_results.png)
 
-*[FIGURE: hyperparameter tuning results — the three accuracies and the chosen best]*
+                                           *[FIGURE: hyperparameter tuning results — the three accuracies and the chosen best]*
 
 ![Hyperparameter tuning bar chart](Results/optional/hyperparameter_barchart.png)
 
-*[FIGURE: hyperparameter tuning bar chart]*
+                                           *[FIGURE: hyperparameter tuning bar chart]*
 
 | Learning rate | Final test accuracy (5 epochs) |
 |---|---|
